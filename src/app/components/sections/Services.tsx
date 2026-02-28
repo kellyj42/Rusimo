@@ -3,45 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    title: "Tiling",
-    description: "Precision ceramic, marble & porcelain installation.",
-    image: "/imgs/tile.jpeg",
-    href: "/services/tiling",
-  },
-  {
-    title: "Terrazzo",
-    description: "Elegant, durable terrazzo flooring solutions.",
-    image: "/imgs/terazo.jpeg",
-    href: "/services/terrazzo",
-  },
-  {
-    title: "Office Partitioning",
-    description: "Modern glass & interior partition systems.",
-    image: "/imgs/terazo.jpeg",
-    href: "/services/partitioning",
-  },
-  {
-    title: "Renovation Works",
-    description: "Complete home & office renovations.",
-    image: "/imgs/kitchen.jpeg",
-    href: "/services/renovation",
-  },
-  {
-    title: "Floor Remodeling",
-    description: "Transform worn floors into beautiful surfaces.",
-    image: "/imgs/floor.jpeg",
-    href: "/services/remodeling",
-  },
-  {
-    title: "Painting & Finishing",
-    description: "Professional painting and wall finishing services.",
-    image: "/imgs/finishing.jpeg",
-    href: "/services/painting",
-  },
-];
+import { services } from "@/data/services";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -99,7 +61,7 @@ export default function Services() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              <Link href={service.href} className="block h-full">
+              <Link href={`/services/${service.slug}`} className="block h-full">
                 {/* Image Container */}
                 <div className="relative h-[350px] w-full overflow-hidden">
                   <Image
