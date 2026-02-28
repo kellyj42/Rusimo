@@ -5,34 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const projects = [
-  {
-    title: "Luxury Living Room Tiling",
-    category: "Residential",
-    image: "/hero.jpg",
-  },
-  {
-    title: "Modern Office Partitioning",
-    category: "Commercial",
-    image: "/hero.jpg",
-  },
-  {
-    title: "Terrazzo Floor Installation",
-    category: "Flooring",
-    image: "/hero.jpg",
-  },
-  {
-    title: "Kitchen Renovation",
-    category: "Residential",
-    image: "/hero.jpg",
-  },
-  {
-    title: "Bathroom Remodeling",
-    category: "Residential",
-    image: "/hero.jpg",
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectsPreview() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -151,7 +124,7 @@ export default function ProjectsPreview() {
                   </p>
                   <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
                   <Link
-                    href={`/projects/${project.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    href={`/projects/${project.slug}`}
                     className="inline-flex items-center gap-2 text-white/90 hover:text-accent transition"
                   >
                     <span className="text-sm uppercase tracking-wider">
