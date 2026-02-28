@@ -8,37 +8,37 @@ const services = [
   {
     title: "Tiling",
     description: "Precision ceramic, marble & porcelain installation.",
-    image: "/sevice/livingroom.jpg",
+    image: "/imgs/tile.jpeg",
     href: "/services/tiling",
   },
   {
     title: "Terrazzo",
     description: "Elegant, durable terrazzo flooring solutions.",
-    image: "/sevice/terazo.jpg",
+    image: "/imgs/terazo.jpeg",
     href: "/services/terrazzo",
   },
   {
     title: "Office Partitioning",
     description: "Modern glass & interior partition systems.",
-    image: "/hero.jpg",
+    image: "/imgs/terazo.jpeg",
     href: "/services/partitioning",
   },
   {
     title: "Renovation Works",
     description: "Complete home & office renovations.",
-    image: "/hero.jpg",
+    image: "/imgs/kitchen.jpeg",
     href: "/services/renovation",
   },
   {
     title: "Floor Remodeling",
     description: "Transform worn floors into beautiful surfaces.",
-    image: "/hero.jpg",
+    image: "/imgs/floor.jpeg",
     href: "/services/remodeling",
   },
   {
     title: "Painting & Finishing",
     description: "Professional painting and wall finishing services.",
-    image: "/hero.jpg",
+    image: "/imgs/finishing.jpeg",
     href: "/services/painting",
   },
 ];
