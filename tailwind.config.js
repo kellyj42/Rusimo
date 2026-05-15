@@ -1,38 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   content: [
+  content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-   theme: {
+  theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-manrope)", "system-ui", "sans-serif"],
+        display: ["var(--font-sora)", "var(--font-manrope)", "sans-serif"],
+      },
       colors: {
-        // 🔵 Primary Brand Blue
         primary: {
-          DEFAULT: "#4A74B5",
-          dark: "#2E4E86",
-          light: "#6E8FC6",
+          DEFAULT: "#172033",
+          dark: "#0B101A",
+          light: "#334155",
         },
-
-        // 🟠 Brand Orange
         accent: {
-          DEFAULT: "#F28C1B",
-          hover: "#FFA73A",
+          DEFAULT: "#D97706",
+          hover: "#B45309",
+          soft: "#F8E4C5",
         },
-
-        // ⚪ Neutrals
+        stone: {
+          DEFAULT: "#C7BCA8",
+          light: "#F6F2EA",
+          dark: "#6E6253",
+        },
         neutral: {
           white: "#FFFFFF",
-          light: "#F4F4F4",
-          dark: "#2B2B2B",
+          light: "#F5F3EF",
+          dark: "#1F2933",
+          muted: "#64748B",
         },
+      },
+      boxShadow: {
+        soft: "0 18px 55px rgba(15, 23, 42, 0.09)",
+        lift: "0 24px 70px rgba(15, 23, 42, 0.14)",
       },
     },
   },
   plugins: [],
-}
-
+};

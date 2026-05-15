@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main className="bg-white py-16 md:py-24">
+    <main className="bg-stone-light pb-20 pt-40 md:pb-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wider text-accent">
             Our Work
           </p>
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold text-primary">
-            Projects
+          <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold text-primary">
+            Project portfolio
           </h1>
           <p className="mt-4 mx-auto max-w-3xl text-neutral-dark/80 text-lg">
             Explore completed projects across residential and commercial spaces,
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <article
               key={project.slug}
-              className="overflow-hidden rounded-3xl border border-neutral-light bg-white shadow-md"
+              className="overflow-hidden border border-primary/8 bg-white shadow-soft"
             >
               <div className="relative h-56 w-full">
                 <Image
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
                 <p className="text-sm font-medium uppercase tracking-wider text-accent">
                   {project.category}
                 </p>
-                <h2 className="mt-2 text-2xl font-bold text-primary">
+                <h2 className="mt-2 font-display text-2xl font-bold text-primary">
                   {project.title}
                 </h2>
                 <p className="mt-3 text-neutral-dark/80 leading-relaxed">
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
                   href={`/projects/${project.slug}`}
                   className="mt-5 inline-flex items-center gap-2 font-medium text-accent hover:text-accent-hover transition-colors"
                 >
-                  View project details <span aria-hidden>→</span>
+                  View project details <span aria-hidden>-&gt;</span>
                 </Link>
               </div>
             </article>

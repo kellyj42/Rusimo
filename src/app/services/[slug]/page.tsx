@@ -40,17 +40,17 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   }
 
   return (
-    <main className="bg-white py-16 md:py-24">
+    <main className="bg-stone-light pb-20 pt-40 md:pb-28">
       <div className="max-w-5xl mx-auto px-6">
         <Link
           href="/#services"
           className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
         >
-          ← Back to services
+          &lt;- Back to services
         </Link>
 
         <div className="mt-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary">
             {service.title}
           </h1>
           <p className="mt-4 text-lg text-neutral-dark/80 max-w-3xl">
@@ -58,7 +58,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </p>
         </div>
 
-        <div className="relative mt-10 h-[280px] md:h-[420px] w-full overflow-hidden rounded-3xl shadow-lg">
+        <div className="relative mt-10 h-[280px] md:h-[420px] w-full overflow-hidden shadow-lift">
           <Image
             src={service.image}
             alt={service.title}
@@ -69,8 +69,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           />
         </div>
 
-        <article className="mt-10 rounded-2xl bg-neutral-light p-6 md:p-8">
-          <h2 className="text-2xl font-semibold text-primary">
+        <article className="mt-10 bg-white p-6 shadow-soft md:p-8">
+          <h2 className="font-display text-2xl font-bold text-primary">
             About this service
           </h2>
           <p className="mt-4 leading-relaxed text-neutral-dark/90">

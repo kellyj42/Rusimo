@@ -1,4 +1,5 @@
 import FinalCTA from "./components/sections/FinalCTA";
+import Gallery from "./components/sections/Gallery";
 import Hero from "./components/sections/Hero";
 import Process from "./components/sections/Process";
 import ProjectsPreview from "./components/sections/Project";
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs/>
       <ProjectsPreview/>
+      <Gallery/>
       <Process/>
       <Testimonials/>
       <FinalCTA/>

@@ -1,126 +1,122 @@
 "use client";
 
+import Image from "next/image";
+import { Award, ClipboardCheck, HardHat, Ruler } from "lucide-react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Clock, Award, Users } from "lucide-react";
 
 const features = [
   {
-    icon: ShieldCheck,
-    title: "Quality Workmanship",
+    icon: Ruler,
+    title: "Measured before quoting",
     description:
-      "We deliver precise, durable and detail-oriented finishing that stands the test of time.",
+      "We inspect dimensions, surfaces, access, and material requirements before recommending a scope.",
   },
   {
-    icon: Clock,
-    title: "On-Time Delivery",
+    icon: ClipboardCheck,
+    title: "Clear scope and timeline",
     description:
-      "Projects are completed within agreed timelines without compromising quality.",
+      "Clients understand the process, expected sequence, material choices, and delivery milestones.",
+  },
+  {
+    icon: HardHat,
+    title: "Clean site workmanship",
+    description:
+      "Our finishing approach prioritizes neat installation, careful preparation, and controlled handover.",
   },
   {
     icon: Award,
-    title: "Premium Materials",
+    title: "Durability-led finishes",
     description:
-      "We use trusted, high-grade materials to ensure long-lasting and elegant results.",
-  },
-  {
-    icon: Users,
-    title: "Experienced Team",
-    description:
-      "Our skilled professionals bring expertise and craftsmanship to every project.",
+      "We focus on surfaces that look refined and continue performing under daily residential or commercial use.",
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 export default function WhyChooseUs() {
   return (
-    <section
-      id="why-us"
-      className="py-28 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden"
-    >
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3 inline-block px-4 py-1 bg-accent/10 rounded-full">
-            Why Choose Us
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">
-            Excellence in Every Detail
-          </h2>
-          <p className="text-neutral-dark/80 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
-            We combine craftsmanship, professionalism, and modern design
-            principles to deliver outstanding finishing solutions.
-          </p>
-        </motion.div>
-
-        {/* Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-
-            return (
-              <motion.div
-                key={index}
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-neutral-light/20 hover:border-accent/50"
-              >
-                {/* Icon container */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 text-primary group-hover:from-accent group-hover:to-accent/80 group-hover:text-white transition-all duration-300 shadow-md group-hover:shadow-accent/25">
-                    <Icon size={28} strokeWidth={1.5} />
-                  </div>
-                  {/* Decorative dot */}
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-primary mb-3">
-                  {feature.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-neutral-dark/80 text-sm leading-relaxed">
-                  {feature.description}
+    <section id="why-us" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-accent">
+              Why clients choose Rusimo
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-primary md:text-5xl">
+              Professional finishing is won in the details.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-dark/74">
+              Beautiful surfaces depend on preparation, alignment, material
+              fit, and the last five percent of finishing. That is where Rusimo
+              puts its attention.
+            </p>
+            <div className="mt-8 grid max-w-xl grid-cols-2 gap-4">
+              <div className="border-l-4 border-accent bg-stone-light p-5">
+                <p className="font-display text-3xl font-bold text-primary">
+                  Homes
                 </p>
+                <p className="mt-1 text-sm text-neutral-dark/70">
+                  Living rooms, kitchens, bathrooms, floors
+                </p>
+              </div>
+              <div className="border-l-4 border-accent bg-stone-light p-5">
+                <p className="font-display text-3xl font-bold text-primary">
+                  Offices
+                </p>
+                <p className="mt-1 text-sm text-neutral-dark/70">
+                  Partitions, renovations, commercial finishes
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 grid max-w-xl grid-cols-[0.8fr_1.2fr] gap-4">
+              <div className="relative min-h-64 overflow-hidden">
+                <Image
+                  src="/imgs/bathroom.jpg"
+                  alt="Bathroom with polished wall tiles, vanity, and glass shower finish"
+                  fill
+                  sizes="(max-width: 1024px) 45vw, 280px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/45 to-transparent" />
+              </div>
+              <div className="relative min-h-64 overflow-hidden">
+                <Image
+                  src="/imgs/office.jpg"
+                  alt="Office desk partitioning reference with warm workstation finishes"
+                  fill
+                  sizes="(max-width: 1024px) 55vw, 360px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/38 to-transparent" />
+              </div>
+            </div>
+          </div>
 
-                {/* Bottom gradient line */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-accent to-accent/50 group-hover:w-3/4 transition-all duration-300" />
-              </motion.div>
-            );
-          })}
-        </motion.div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+
+              return (
+                <motion.article
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.42, delay: index * 0.06 }}
+                  className="border border-primary/8 bg-white p-6 shadow-soft"
+                >
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-accent-soft">
+                    <Icon size={22} strokeWidth={1.8} />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-primary">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-3 leading-7 text-neutral-dark/70">
+                    {feature.description}
+                  </p>
+                </motion.article>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -40,20 +40,20 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="bg-white py-16 md:py-24">
+    <main className="bg-stone-light pb-20 pt-40 md:pb-28">
       <div className="max-w-5xl mx-auto px-6">
         <Link
           href="/projects"
           className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
         >
-          ← Back to projects
+          &lt;- Back to projects
         </Link>
 
         <header className="mt-8">
           <p className="text-sm font-medium uppercase tracking-wider text-accent">
             {project.category}
           </p>
-          <h1 className="mt-2 text-4xl md:text-5xl font-bold text-primary">
+          <h1 className="mt-2 font-display text-4xl md:text-5xl font-bold text-primary">
             {project.title}
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-neutral-dark/80">
@@ -61,7 +61,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </p>
         </header>
 
-        <div className="relative mt-10 h-[280px] md:h-[460px] w-full overflow-hidden rounded-3xl shadow-lg">
+        <div className="relative mt-10 h-[280px] md:h-[460px] w-full overflow-hidden shadow-lift">
           <Image
             src={project.image}
             alt={project.title}
@@ -72,8 +72,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           />
         </div>
 
-        <article className="mt-10 rounded-2xl bg-neutral-light p-6 md:p-8">
-          <h2 className="text-2xl font-semibold text-primary">
+        <article className="mt-10 bg-white p-6 shadow-soft md:p-8">
+          <h2 className="font-display text-2xl font-bold text-primary">
             Project overview
           </h2>
           <p className="mt-4 leading-relaxed text-neutral-dark/90">

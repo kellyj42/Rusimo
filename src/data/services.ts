@@ -27,7 +27,7 @@ export const services: ServiceItem[] = [
     slug: "partitioning",
     title: "Office Partitioning",
     description: "Modern glass & interior partition systems.",
-    image: "/imgs/office.jpg",
+    image: "/imgs/partitioning.jpg",
     summary:
       "Our office partitioning solutions create practical work zones without losing openness and light. We install clean, professional partition systems that improve privacy, organization, and the overall flow of your workspace.",
   },
@@ -35,7 +35,7 @@ export const services: ServiceItem[] = [
     slug: "renovation",
     title: "Renovation Works",
     description: "Complete home & office renovations.",
-    image: "/imgs/kitchen.jpeg",
+    image: "/imgs/house.jpeg",
     summary:
       "We manage renovation projects from planning to finishing, covering structural updates, surfaces, and detail work. The goal is to refresh your space with better function, improved aesthetics, and reliable workmanship.",
   },

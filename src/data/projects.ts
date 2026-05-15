@@ -11,89 +11,89 @@ export type ProjectItem = {
 
 export const projects: ProjectItem[] = [
   {
-    slug: "luxury-living-room-tiling",
-    title: "Luxury Living Room Tiling",
+    slug: "residential-driveway-paving",
+    title: "Residential Driveway Paving",
+    category: "Exterior finishing",
+    image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.07 AM.jpeg",
+    excerpt:
+      "Interlocking paver installation that improves arrival, drainage, and exterior polish.",
+    overview:
+      "This project focused on creating a cleaner, stronger driveway approach with interlocking pavers and a crisp edge condition. The long surface required practical planning around levels, drainage, and visual alignment from the gate to the main building.",
+    scope: [
+      "Ground preparation and level correction for long-term surface stability.",
+      "Interlocking paver layout with consistent spacing and directional flow.",
+      "Edge detailing around drainage channels, walls, and gate access.",
+    ],
+    outcome:
+      "The completed entrance now feels more ordered and premium, with a durable surface that improves day-to-day access and the first impression of the property.",
+  },
+  {
+    slug: "courtyard-paver-installation",
+    title: "Courtyard Paver Installation",
     category: "Residential",
-    image: "/imgs/sittingroom.jpg",
+    image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.05 AM.jpeg",
     excerpt:
-      "High-end tile layout and finishing designed to elevate a premium living space.",
+      "Patterned exterior paving prepared for a stronger, more usable compound surface.",
     overview:
-      "This project focused on upgrading a large living room with precision tile installation and clean modern detailing. The client wanted a polished look that felt luxurious while still being practical for daily family use.",
+      "The courtyard required a hard-wearing finish that could handle movement, weather, and everyday use. Rusimo prepared the surface and installed patterned pavers to create a more practical exterior area.",
     scope: [
-      "Surface preparation and leveling for long-term durability.",
-      "Custom tile alignment for consistent spacing and visual symmetry.",
-      "Edge finishing and joint treatment for a neat premium finish.",
+      "Surface grading and preparation before paver installation.",
+      "Pattern planning to keep the compound visually consistent.",
+      "Joint filling, edge control, and cleanup after installation.",
     ],
     outcome:
-      "The completed space achieved a refined, high-value finish with improved durability, easier maintenance, and a cohesive look across the room.",
+      "The compound gained a cleaner finish, better usability, and a more structured outdoor appearance.",
   },
   {
-    slug: "modern-office-partitioning",
-    title: "Modern Office Partitioning",
-    category: "Commercial",
-    image: "/imgs/partitioning.jpg",
+    slug: "exterior-brickwork-finishing",
+    title: "Exterior Brickwork Finishing",
+    category: "Masonry",
+    image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.08 AM.jpeg",
     excerpt:
-      "Functional partition design that improved workflow, privacy, and natural light.",
+      "Clean brickwork execution prepared for durable exterior finishing.",
     overview:
-      "We restructured an open office floor into practical zones using modern partition systems. The goal was to create focused workspaces and meeting areas while preserving openness and visual continuity.",
+      "This exterior brickwork stage required careful alignment, neat openings, and preparation for the next finish layers. The work shows the structural side of Rusimo's finishing pipeline before final surface treatment.",
     scope: [
-      "Space planning for team collaboration and movement flow.",
-      "Installation of clean-lined partitions with durable framing.",
-      "Finishing integration to match the office interior style.",
+      "Brick setting and alignment around openings and wall faces.",
+      "Coordination with surrounding blockwork and site constraints.",
+      "Preparation for plastering, painting, and exterior detailing.",
     ],
     outcome:
-      "The office now supports better productivity and clearer team organization, with improved privacy and a modern professional appearance.",
+      "The structure was brought to a cleaner, more organized stage for final architectural finishing.",
   },
   {
-    slug: "terrazzo-floor-installation",
-    title: "Terrazzo Floor Installation",
-    category: "Flooring",
-    image: "/imgs/floor.jpeg",
-    excerpt:
-      "Durable terrazzo flooring installation with seamless finishing and modern appeal.",
-    overview:
-      "This floor installation was designed for high daily traffic and long-term wear resistance. The client requested a surface that balanced elegant aesthetics with strong performance in a busy environment.",
-    scope: [
-      "Base preparation and substrate correction before installation.",
-      "Terrazzo placement, compaction, and precision finishing.",
-      "Protective sealing for longevity and maintenance efficiency.",
-    ],
-    outcome:
-      "The final terrazzo floor delivered a sleek and resilient surface that enhances the entire space and performs reliably over time.",
-  },
-  {
-    slug: "kitchen-renovation",
-    title: "Kitchen Renovation",
+    slug: "outdoor-lounge-upgrade",
+    title: "Outdoor Lounge Upgrade",
     category: "Residential",
-    image: "/imgs/k.jpeg",
+    image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.10 AM.jpeg",
     excerpt:
-      "A full kitchen refresh focused on smarter layout, cleaner finishes, and improved usability.",
+      "A compact outdoor living area upgraded with decking, planting edges, and shaded cover.",
     overview:
-      "This renovation transformed an outdated kitchen into a bright, efficient cooking and dining space. We combined structural updates with modern finishes to deliver both visual impact and everyday function.",
+      "This outdoor upgrade focused on turning an underused exterior corner into a practical lounge zone. The work combines landscaping, deck surfaces, shading, and finishing details for a more inviting residential space.",
     scope: [
-      "Demolition and reconstruction of key kitchen sections.",
-      "Wall, floor, and backsplash finishing with coordinated materials.",
-      "Final detailing for lighting, alignment, and clean transitions.",
+      "Deck and walkway surface coordination.",
+      "Shade structure and seating-zone finishing.",
+      "Landscape edge detailing and final site cleanup.",
     ],
     outcome:
-      "The upgraded kitchen now feels more open and organized, with improved workflow, stronger material quality, and a contemporary finish.",
+      "The completed outdoor space feels more usable, comfortable, and visually finished for everyday home life.",
   },
   {
-    slug: "bathroom-remodeling",
-    title: "Bathroom Remodeling",
-    category: "Residential",
-    image: "/imgs/bathroom.jpg",
+    slug: "facade-construction-preparation",
+    title: "Facade Construction Preparation",
+    category: "Construction",
+    image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.08 AM (1).jpeg",
     excerpt:
-      "Complete bathroom remodeling with moisture-resistant finishes and modern styling.",
+      "Multi-level exterior preparation with scaffold access for facade finishing work.",
     overview:
-      "We remodeled this bathroom to improve comfort, durability, and overall aesthetics. The project required careful waterproofing, precise tile work, and coordinated finishing to produce a clean modern result.",
+      "This stage captured the preparation required before a high exterior wall can receive final finishes. Scaffold access, substrate condition, and sequence planning all influence the quality of the finished facade.",
     scope: [
-      "Waterproofing system upgrade and substrate protection.",
-      "Tile installation for walls and floors with accurate joint work.",
-      "Fixture-area detailing and finishing quality control.",
+      "Access planning and scaffold coordination.",
+      "Exterior wall inspection and preparation.",
+      "Sequencing for plastering, detailing, and finishing work.",
     ],
     outcome:
-      "The remodeled bathroom is now brighter, easier to maintain, and built for long-term reliability in a moisture-heavy environment.",
+      "The site was prepared for safer, cleaner, and more controlled exterior finishing at height.",
   },
 ];
 

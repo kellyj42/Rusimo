@@ -1,100 +1,112 @@
-"use client";
-
 import Link from "next/link";
-import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+
+const services = [
+  "Tiling",
+  "Terrazzo installation",
+  "Office partitioning",
+  "Renovation works",
+  "Floor remodeling",
+  "Painting and finishing",
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-dark text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-        {/* BRAND */}
+    <footer className="bg-primary-dark text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1.25fr_0.75fr_0.8fr_1fr] md:px-8">
         <div>
-          <h3 className="text-2xl font-bold mb-4">Rusimo Construction</h3>
-          <p className="text-gray-300 leading-relaxed">
-            We specialize in tiling, terrazzo installation, office partitioning,
-            renovation and floor remodeling — delivering beauty, strength, and
-            precision in every project.
+          <h3 className="font-display text-3xl font-bold">
+            Rusimo Construction
+          </h3>
+          <p className="mt-4 max-w-sm leading-7 text-white/68">
+            Premium finishing, tiling, terrazzo, renovation, partitioning, and
+            remodeling services for homes and commercial spaces in Uganda.
           </p>
-
-          {/* Social Icons */}
-          <div className="flex gap-4 mt-6">
+          <div className="mt-6 flex gap-3">
             <Link
-              href="#"
-              className="p-2 bg-white/10 rounded-full hover:bg-accent transition"
+              href="https://www.facebook.com/"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/8 text-white transition hover:bg-accent"
+              aria-label="Rusimo on Facebook"
             >
               <Facebook size={18} />
             </Link>
             <Link
-              href="#"
-              className="p-2 bg-white/10 rounded-full hover:bg-accent transition"
+              href="https://www.instagram.com/"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/8 text-white transition hover:bg-accent"
+              aria-label="Rusimo on Instagram"
             >
               <Instagram size={18} />
             </Link>
           </div>
         </div>
 
-        {/* QUICK LINKS */}
         <div>
-          <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-          <ul className="space-y-4 text-gray-300">
+          <h4 className="font-bold text-white">Explore</h4>
+          <ul className="mt-5 space-y-3 text-white/68">
             {[
-              { label: "Home", href: "/" },
               { label: "Services", href: "/#services" },
               { label: "Projects", href: "/#projects" },
+              { label: "Process", href: "/#process" },
+              { label: "Testimonials", href: "/#testimonials" },
               { label: "Contact", href: "/contact" },
             ].map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className="relative group">
-                  <span className="group-hover:text-accent transition">
-                    {item.label}
-                  </span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+                <Link
+                  href={item.href}
+                  className="transition hover:text-accent-soft"
+                >
+                  {item.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* SERVICES */}
         <div>
-          <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-          <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-accent transition">Tiling</li>
-            <li className="hover:text-accent transition">
-              Terrazzo Installation
-            </li>
-            <li className="hover:text-accent transition">
-              Office Partitioning
-            </li>
-            <li className="hover:text-accent transition">Renovation Works</li>
-            <li className="hover:text-accent transition">Floor Remodeling</li>
+          <h4 className="font-bold text-white">Services</h4>
+          <ul className="mt-5 space-y-3 text-white/68">
+            {services.map((service) => (
+              <li key={service}>{service}</li>
+            ))}
           </ul>
         </div>
 
-        {/* CONTACT */}
         <div>
-          <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
-          <ul className="space-y-4 text-gray-300">
-            <li className="flex items-start gap-3">
-              <MapPin size={18} className="text-accent mt-1" />
+          <h4 className="font-bold text-white">Contact</h4>
+          <ul className="mt-5 space-y-4 text-white/72">
+            <li className="flex gap-3">
+              <MapPin size={18} className="mt-1 shrink-0 text-accent-soft" />
               Kampala, Uganda
             </li>
-
-            <li className="flex items-center gap-3">
-              <Phone size={18} className="text-accent" />
-              +256 XXX XXX XXX
+            <li>
+              <a
+                href="tel:+256774712943"
+                className="flex gap-3 transition hover:text-accent-soft"
+              >
+                <Phone size={18} className="mt-1 shrink-0 text-accent-soft" />
+                +256 774 712 943 / +256 700 504 534
+              </a>
             </li>
-
-            <li className="flex items-center gap-3">
-              <Mail size={18} className="text-accent" />
-              info@rusimo.com
+            <li>
+              <a
+                href="mailto:rusimoconstructions@gmail.com"
+                className="flex gap-3 transition hover:text-accent-soft"
+              >
+                <Mail size={18} className="mt-1 shrink-0 text-accent-soft" />
+                rusimoconstructions@gmail.com
+              </a>
             </li>
           </ul>
+          <Link
+            href="/contact"
+            className="mt-7 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-bold text-white transition hover:bg-accent-hover"
+          >
+            Request quote
+          </Link>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-white/10 mt-16 pt-6 text-center text-gray-400 text-sm">
+      <div className="border-t border-white/10 px-5 py-6 text-center text-sm text-white/48">
         © {new Date().getFullYear()} Rusimo Construction Company. All rights
         reserved.
       </div>
