@@ -3,7 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+import JsonLd from "@/app/components/seo/JsonLd";
 import { services, servicesBySlug } from "@/data/services";
+import {
+  breadcrumbSchema,
+  createPageMetadata,
+  serviceSchema,
+} from "@/lib/seo";
 
 type ServicePageProps = {
   params: Promise<{ slug: string }>;
@@ -25,10 +31,12 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${service.title} | Rusimo`,
-    description: service.description,
-  };
+  return createPageMetadata({
+    title: `${service.title} Services in Kampala`,
+    description: `${service.description} ${service.summary}`,
+    path: `/services/${service.slug}`,
+    image: service.image,
+  });
 }
 
 export default async function ServiceDetailPage({ params }: ServicePageProps) {
@@ -41,6 +49,16 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
   return (
     <main className="bg-stone-light pb-20 pt-40 md:pb-28">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/#services" },
+            { name: service.title, path: `/services/${service.slug}` },
+          ]),
+          serviceSchema(service),
+        ]}
+      />
       <div className="max-w-5xl mx-auto px-6">
         <Link
           href="/#services"

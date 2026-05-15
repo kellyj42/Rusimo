@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "Projects", href: "/#projects" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Process", href: "/#process" },
   { name: "About", href: "/#why-us" },
   { name: "Contact", href: "/contact" },
@@ -40,7 +41,8 @@ export default function Navbar() {
         <nav className="hidden items-center gap-8 text-sm font-semibold text-primary md:flex">
           {navLinks.map((link) => {
             const isActive =
-              link.href === "/contact" && pathname === "/contact";
+              (link.href === "/contact" && pathname === "/contact") ||
+              (link.href === "/gallery" && pathname === "/gallery");
 
             return (
               <Link

@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const services = [
-  "Tiling",
-  "Terrazzo installation",
-  "Office partitioning",
-  "Renovation works",
-  "Floor remodeling",
-  "Painting and finishing",
+  { label: "Tiling", href: "/services/tiling" },
+  { label: "Terrazzo installation", href: "/services/terrazzo" },
+  { label: "Office partitioning", href: "/services/partitioning" },
+  { label: "Renovation works", href: "/services/renovation" },
+  { label: "Floor remodeling", href: "/services/remodeling" },
+  { label: "Painting and finishing", href: "/services/painting" },
 ];
 
 export default function Footer() {
@@ -46,6 +46,7 @@ export default function Footer() {
             {[
               { label: "Services", href: "/#services" },
               { label: "Projects", href: "/#projects" },
+              { label: "Gallery", href: "/gallery" },
               { label: "Process", href: "/#process" },
               { label: "Testimonials", href: "/#testimonials" },
               { label: "Contact", href: "/contact" },
@@ -66,7 +67,14 @@ export default function Footer() {
           <h4 className="font-bold text-white">Services</h4>
           <ul className="mt-5 space-y-3 text-white/68">
             {services.map((service) => (
-              <li key={service}>{service}</li>
+              <li key={service.href}>
+                <Link
+                  href={service.href}
+                  className="transition hover:text-accent-soft"
+                >
+                  {service.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -75,7 +83,11 @@ export default function Footer() {
           <h4 className="font-bold text-white">Contact</h4>
           <ul className="mt-5 space-y-4 text-white/72">
             <li className="flex gap-3">
-              <MapPin size={18} className="mt-1 shrink-0 text-accent-soft" />
+              <MapPin
+                size={18}
+                className="mt-1 shrink-0 text-accent-soft"
+                aria-hidden="true"
+              />
               Kampala, Uganda
             </li>
             <li>
@@ -83,7 +95,11 @@ export default function Footer() {
                 href="tel:+256774712943"
                 className="flex gap-3 transition hover:text-accent-soft"
               >
-                <Phone size={18} className="mt-1 shrink-0 text-accent-soft" />
+                <Phone
+                  size={18}
+                  className="mt-1 shrink-0 text-accent-soft"
+                  aria-hidden="true"
+                />
                 +256 774 712 943 / +256 700 504 534
               </a>
             </li>
@@ -92,7 +108,11 @@ export default function Footer() {
                 href="mailto:rusimoconstructions@gmail.com"
                 className="flex gap-3 transition hover:text-accent-soft"
               >
-                <Mail size={18} className="mt-1 shrink-0 text-accent-soft" />
+                <Mail
+                  size={18}
+                  className="mt-1 shrink-0 text-accent-soft"
+                  aria-hidden="true"
+                />
                 rusimoconstructions@gmail.com
               </a>
             </li>

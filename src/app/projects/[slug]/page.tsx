@@ -3,7 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+import JsonLd from "@/app/components/seo/JsonLd";
 import { projects, projectsBySlug } from "@/data/projects";
+import {
+  breadcrumbSchema,
+  createPageMetadata,
+  projectSchema,
+} from "@/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -25,10 +31,13 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${project.title} | Rusimo Projects`,
+  return createPageMetadata({
+    title: `${project.title} | Construction Project in Kampala`,
     description: project.excerpt,
-  };
+    path: `/projects/${project.slug}`,
+    image: project.image,
+    type: "article",
+  });
 }
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
@@ -41,6 +50,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <main className="bg-stone-light pb-20 pt-40 md:pb-28">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Projects", path: "/projects" },
+            { name: project.title, path: `/projects/${project.slug}` },
+          ]),
+          projectSchema(project),
+        ]}
+      />
       <div className="max-w-5xl mx-auto px-6">
         <Link
           href="/projects"

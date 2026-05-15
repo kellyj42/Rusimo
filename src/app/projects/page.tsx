@@ -2,16 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+import JsonLd from "../components/seo/JsonLd";
 import { projects } from "@/data/projects";
+import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Projects | Rusimo",
-  description: "Browse selected Rusimo renovation and finishing projects.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Construction Finishing Projects in Kampala",
+  description:
+    "Browse Rusimo Construction projects across residential paving, exterior finishing, masonry preparation, facade work, renovations, and outdoor upgrades in Uganda.",
+  path: "/projects",
+  image: "/Rusimo/WhatsApp Image 2026-05-15 at 6.27.07 AM.jpeg",
+});
 
 export default function ProjectsPage() {
   return (
     <main className="bg-stone-light pb-20 pt-40 md:pb-28">
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+        ])}
+      />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wider text-accent">

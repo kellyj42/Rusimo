@@ -3,17 +3,26 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+import JsonLd from "../components/seo/JsonLd";
 import { imageLibrary } from "@/data/imageLibrary";
+import { breadcrumbSchema, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Gallery | Rusimo",
+export const metadata: Metadata = createPageMetadata({
+  title: "Construction Finishing Gallery | Rusimo Projects in Kampala",
   description:
-    "Explore Rusimo Construction's full visual archive of interiors, exterior finishing, flooring, paving, office partitioning, and planning work.",
-};
+    "Explore Rusimo Construction's gallery of interior finishes, kitchens, bathrooms, flooring, paving, office partitioning, facade work, and planning references in Kampala.",
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   return (
     <main className="bg-stone-light pb-20 pt-36 md:pb-28">
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Gallery", path: "/gallery" },
+        ])}
+      />
       <section className="mx-auto max-w-7xl px-5 md:px-8">
         <Link
           href="/#gallery"
