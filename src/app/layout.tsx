@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "construction finishing Kampala",
+    "residential construction Kampala",
+    "house construction Uganda",
+    "home builders Kampala",
     "tiling services Uganda",
     "terrazzo flooring Kampala",
     "office partitioning Kampala",

@@ -2,7 +2,12 @@ const faqs = [
   {
     question: "What construction finishing services does Rusimo provide?",
     answer:
-      "Rusimo provides tiling, terrazzo, office partitioning, renovation works, floor remodeling, painting, exterior paving, masonry preparation, and general finishing services for residential and commercial spaces.",
+      "Rusimo provides residential house construction, foundation works, walling, roofing, plastering, tiling, terrazzo, renovation works, floor remodeling, painting, ceiling works, exterior paving, and final finishing services.",
+  },
+  {
+    question: "Can Rusimo build a full house from foundation to roofing?",
+    answer:
+      "Yes. Rusimo can handle complete residential house construction from foundation works through walling, roofing, plastering, flooring, painting, ceilings, and final interior and exterior finishing. The focus is mainly homes, family houses, renovations, and small-to-medium residential projects.",
   },
   {
     question: "Does Rusimo Construction serve Kampala?",

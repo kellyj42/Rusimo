@@ -8,7 +8,7 @@ export const siteConfig = {
   shortName: "Rusimo Construction",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rusimoconstruction.com",
   description:
-    "Rusimo Construction provides premium construction finishing, tiling, terrazzo, office partitioning, renovation, painting, and floor remodeling services in Kampala, Uganda.",
+    "Rusimo Construction builds residential homes from foundation to roofing and provides premium construction finishing, tiling, terrazzo, renovation, painting, ceiling, and floor remodeling services in Kampala, Uganda.",
   email: "rusimoconstructions@gmail.com",
   phone: "+256774712943",
   alternatePhone: "+256700504534",
@@ -189,7 +189,15 @@ export function faqSchema() {
         name: "What construction finishing services does Rusimo provide?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Rusimo provides tiling, terrazzo, office partitioning, renovation works, floor remodeling, painting, exterior paving, masonry preparation, and general finishing services for residential and commercial spaces.",
+          text: "Rusimo provides residential house construction, foundation works, walling, roofing, plastering, tiling, terrazzo, office partitioning, renovation works, floor remodeling, painting, exterior paving, masonry preparation, ceiling works, and general finishing services.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can Rusimo build a full house from foundation to roofing?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Rusimo can handle complete residential house construction from foundation works through walling, roofing, plastering, flooring, painting, ceilings, and final interior and exterior finishing. The company focuses mainly on homes, family houses, renovations, and small-to-medium residential projects.",
         },
       },
       {
